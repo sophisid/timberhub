@@ -3,7 +3,7 @@ import { Person } from "./person";
 
 export interface Projects {
     id: number;
-    name: string;
+    title: string;
     hasCompany: Company;
     creator: Person;
     img:string;
