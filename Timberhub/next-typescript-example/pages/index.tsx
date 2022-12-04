@@ -29,7 +29,7 @@ export default function Home() {
         <div className={styles.banner_primary}>{msg.big_primary}</div>
         <div className={styles.banner_description}>{msg.description}<div className={styles.banner_description_link}>{msg.link}</div> </div> 
         <div className={styles.actions}>
-          <Link href="/services">
+          <Link href="/projects">
             <div className={styles.actions_action}>
               <ButtonLarge
                 text="PROJECTS"

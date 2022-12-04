@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
-import { Projects } from "./interface";
-import Pagination from "./Pagination";
+import { Projects } from "../model/projects";
+import Pagination from "../components/pagination/Pagination";
+import { Api } from "./api/api";
 
 const App: React.FC = () => {
   const [page, setPage] = useState(1);
@@ -25,16 +26,7 @@ const App: React.FC = () => {
     console.log("effct");
 
     const fetchData = async () => {
-      const result = [{
-        id: "123",
-        name: "project1",
-        company_name: "facebook",
-        creator: "m3",
-        occupation: "engineer",
-        progress: 50,
-        deadline: new Date(),
-      }];
-      setProjectsData(result);
+      setProjectsData(Api);
       setTotalPages(totalPages);
     };
   });
@@ -56,13 +48,13 @@ const App: React.FC = () => {
                           <th>
                             <div>
                                 <div>{project.name}</div>
-                                <div>{project.company_name}</div>
+                                <div>{project.hasCompany.name}</div>
                             </div>
                          </th>
                           <th>
                             <div>
-                                <div>{project.creator}</div>
-                                <div>{project.occupation}</div>
+                                <div>{project.creator.name}</div>
+                                <div>{project.creator.occupation}</div>
                             </div>
                           </th>
                           <th>
