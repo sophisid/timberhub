@@ -1,0 +1,14 @@
+@import "../../shared/styles/utils.module.scss";
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    overflow-x: hidden;
+}
+
+@media (max-width: 800px) {
+    .m_b {
+        margin-bottom: 120px;
+    }
+}
+

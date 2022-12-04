@@ -1,0 +1,217 @@
+@import "../../shared/styles/utils.module.scss";
+
+.btn{
+  width: get-vw(84px);
+  height: get-vh(40px);
+  min-width: 84px;
+  min-height: 32px;
+  padding: get-vh(8px);
+  font-size: 1.55vh;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  color: $color-light-100;
+
+  @include font-label-large-label-14-px;
+
+  @include stacks-4;
+  &_text {
+    align-self: center;
+    margin: 0.01vh;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+    min-width: get-vw(24px);
+    min-height: get-vh(24px);
+    align-self: center;
+    margin-right: 8px;
+  }
+}
+
+.btn:hover {
+  -webkit-animation: scale-up-center 0.1s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  cursor: pointer;
+}
+
+.btn_link {
+  width: fit-content;
+  height: fit-content;
+  min-width: get-vw(84px);
+  min-height: get-vh(40px);
+  font-size: 1.55vh;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  color: $color-light-100;
+
+  @include font-label-large-label-14-px;
+
+  @include stacks-4;
+  &_text {
+    align-self: center;
+    margin: 0.01vh;
+  }
+}
+
+.btn_link:hover {
+  -webkit-animation: scale-up-center 0.1s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  cursor: pointer;
+}
+
+.btn_large {
+  width: fit-content;
+  height: fit-content;
+  min-width: get-vw(120px);
+  min-height: get-vh(48px);
+  font-size: 1.55vh;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  color: $color-light-100;
+  @include font-label-large-label-14-px;
+  @include stacks-4;
+
+  &_text {
+    align-self: center;
+    margin: 1vh;
+  }
+}
+
+.btn_large:hover {
+  -webkit-animation: scale-up-center 0.1s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  cursor: pointer;
+}
+
+.btn_outlined{
+  position: relative;
+  border-radius: 4px;
+  width: fit-content;
+  height: fit-content;
+  min-width: get-vw(120px);
+  min-height: get-vh(30px);
+  padding: get-vh(8px);
+  justify-content: center;
+  display: flex;
+  border: get-vh(2px) solid $color-success-100;
+  @include font-label-large-label-14-px;
+  &_text {
+    align-self: center;
+    margin: 0.01vh;
+  }
+}
+
+.btn_outlined:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: white;
+  -webkit-animation: shadow-drop-center 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: shadow-drop-center 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.btn_outlined_large{
+  position: relative;
+  border-radius: 4px;
+  width: fit-content;
+  height: fit-content;
+  min-width: get-vw(120px);
+  min-height: get-vh(48px);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: get-vh(2px) solid $color-success-100;
+  @include font-label-large-label-14-px;
+  &_text {
+    align-self: center;
+    margin: 1vh;
+  }
+}
+
+.btn_outlined_large:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: white;
+  -webkit-animation: shadow-drop-center 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: shadow-drop-center 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.fill:hover {
+  color: white;
+}
+
+.fill:before {
+  content: "";
+  position: absolute;
+  background: $color-primary-main;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  transition:top 0.09s ease-in;
+  -webkit-transition: top 0.09s ease-in;
+}
+
+.fill:hover:before {
+  top: 0;
+}
+
+/**
+ * ----------------------------------------
+ * animation shadow-drop-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes shadow-drop-center {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes shadow-drop-center {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation scale-up-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}

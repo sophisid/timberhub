@@ -1,0 +1,160 @@
+@import "../../shared/styles/utils.module.scss";
+
+/** Header styles */
+
+.header{
+  height: 14vh;
+ 
+}
+.bottomMenu{
+  display: none;
+}
+.logo {
+  background: url("/public/images/logos/home.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16vw;
+  margin-top: get-vh(40px);
+
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+
+.logoShadowed {
+  height: 4.22vh;
+  margin-top: 0.88vh;
+  @include stacks-4;
+}
+
+.line {
+  width: 100%;
+  margin-top: 0.88vh;
+  height: 1px;
+  background: $color-light-500;
+  border: none;
+}
+
+.actions {
+  float: right;
+  display: flex;
+  margin-right: get-vw(147px);
+  margin-top: get-vh(47px);
+
+  &_action {
+    @include font-label-large-label-14-px;
+    margin-left: get-vw(48px);
+    align-self: center;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  }
+
+  &_action:hover {
+    color: $color-primary-main;
+  }
+
+  &_action_special {
+    @include font-label-large-label-14-px;
+    margin-left: get-vw(48px);
+    align-self: center;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  }
+}
+
+@media (max-width: 800px) {
+  .header{
+     text-align: -webkit-center !important;
+  }
+  .logo {
+    display: block;
+   width: 300px !important;
+   height: 10vh;
+   position: relative;
+   z-index: 1000;
+   background-position: center;
+
+  }
+  .actions {
+    display: none;
+  }
+  .bottomMenu {
+    display: block;
+  }
+ 
+}
+
+@media (min-width: 800px) {
+  .logo {
+    display: block;
+    margin-left: get-vw(50px);
+    height: 12vh !important;
+    float: left;
+  }
+  .actions {
+    float: right;
+    display: flex;
+    margin-right: 10.2083333333vw;
+    margin-top: 5.2222222222vh;
+  }
+  .bottomMenu {
+    display: none;
+  }
+}
+
+.bottomMenu {
+  background: white;
+  z-index: 100;
+  position: fixed;
+  padding: 18px;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -1px 7px rgba(0, 0, 0, 0.1);
+
+  &_item {
+    width: 16%;
+    float: left;
+    @include font-label-small-label-10-px;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+  &_icon {
+    width: 35%;
+  }
+}
+
+// @media (prefers-color-scheme: dark) {
+//   .actions{
+//     color:white;
+//   }
+//   .logo {
+//     background: url("/public/images/logos/home_dark.svg");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//   }
+// }
