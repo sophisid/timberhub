@@ -3,37 +3,43 @@ import api from "../../pages/api/api";
 import {TextField} from "@mui/material";
 import { Person } from "../../model/person";
 import DataTable from "react-data-table-component";
+import styles from "./filter.module.scss";
 const columns = [
     {
         name: 'Project Name',
         selector: (row: { title: string; }) => row.title,
+        sortable: true,
     },
     {
       name:'Created by',
       selector: (row:{creator : Person ;}) =>row.creator.name,
+      sortable: true,
     }, 
     {
       name:"Progress",
       selector: (row: {progress: number;}) => row.progress,
+      sortable: true,
     },
     {
       name:"Deadline",
       selector: (row: {deadline: Date;}) => row.deadline.getDay(),
+      sortable: true,
     }
 ]; 
 
 const FilterComponent = ({ filterText, onFilter, onClear }) => (
-    	<div>
+    	<div className={styles.filter}>
     		<TextField
     			id="search"
     			type="text"
-    			placeholder="Filter By Name"
+    			placeholder="Search project..."
     			aria-label="Search Input"
     			value={filterText}
     			onChange={onFilter}
+                className={styles.filter_searchbar}
     		/>
     		<button type="button" onClick={onClear}>
-    			X
+    			Clear
     		</button>
     	</div>
     );

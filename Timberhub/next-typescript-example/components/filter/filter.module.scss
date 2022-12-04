@@ -1,3 +1,19 @@
-.btn{
-    color:blue;
+.filter{
+    min-width: 95vw;
+    position: relative;
+    button{
+        color:#808080;
+        height: 2vh;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        border: none;
+        background: none;
+    }
+    
+    &_searchbar{
+        // min-width: 95vw !important;
+        display:  flex!important;
+        justify-content: center !important;
+    }
 }

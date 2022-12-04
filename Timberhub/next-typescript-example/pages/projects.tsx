@@ -24,7 +24,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className={styles.dataTable}>
       <Filtering  />
     </div>
   );

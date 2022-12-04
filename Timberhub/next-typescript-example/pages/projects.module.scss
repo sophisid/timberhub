@@ -1,9 +1,8 @@
 @import "../shared/styles/utils.module.scss";
 @import  "../components/buttons/buttons.module.scss";
-.dataspace{
-    padding: 2vw;
-}
-
-.btn{
-
+.dataTable{
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
