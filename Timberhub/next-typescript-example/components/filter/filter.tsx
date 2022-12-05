@@ -4,6 +4,7 @@ import {TextField} from "@mui/material";
 import { Person } from "../../model/person";
 import DataTable from "react-data-table-component";
 import styles from "./filter.module.scss";
+import CustomMaterialPagination from "../pagination/Pagination";
 const columns = [
     {
         name: 'Project Name',
@@ -72,6 +73,7 @@ export const Filtering = () => {
     			paginationResetDefaultPage={resetPaginationToggle} 
     			subHeader
     			subHeaderComponent={subHeaderComponentMemo}
+                paginationComponent={CustomMaterialPagination}
     			selectableRows
     			persistTableHead
     		/>
