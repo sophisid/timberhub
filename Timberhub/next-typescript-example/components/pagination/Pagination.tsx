@@ -34,27 +34,50 @@ function TablePaginationActions({ count, page, rowsPerPage, onChangePage }) {
 
     return (
         <>
-            <IconButton onClick={handleFirstPageButtonClick} disabled={page === 0} aria-label="first page">
+            {page === 0 ? (
+            <IconButton className={styles.btnDis} onClick={handleFirstPageButtonClick} disabled={page === 0} aria-label="first page">
                 <KeyboardDoubleArrowLeftIcon />
-            </IconButton>
-            <IconButton onClick={handleBackButtonClick} disabled={page === 0} aria-label="previous page">
+            </IconButton>):(
+            <IconButton className={styles.btn} onClick={handleFirstPageButtonClick} disabled={page === 0} aria-label="first page">
+                <KeyboardDoubleArrowLeftIcon />
+            </IconButton>)}
+            {page === 0 ? (
+            <IconButton className={styles.btnDis} onClick={handleBackButtonClick} disabled={page === 0} aria-label="previous page">
                 <KeyboardArrowLeft />
-            </IconButton>
+            </IconButton>):(<IconButton className={styles.btn} onClick={handleBackButtonClick} disabled={page === 0} aria-label="previous page">
+                <KeyboardArrowLeft />
+            </IconButton>)}
             {/* todo buttons with numbers */}
-            <IconButton
+            {page >= getNumberOfPages(count, rowsPerPage) - 1 ? (
+            <IconButton className={styles.btnDis}
                 onClick={handleNextButtonClick}
                 disabled={page >= getNumberOfPages(count, rowsPerPage) - 1}
                 aria-label="next page"
             >
                 <KeyboardArrowRight />
-            </IconButton>
+            </IconButton>):(  <IconButton className={styles.btn}
+                onClick={handleNextButtonClick}
+                disabled={page >= getNumberOfPages(count, rowsPerPage) - 1}
+                aria-label="next page"
+            >
+                <KeyboardArrowRight />
+            </IconButton>)}
+            {page >= getNumberOfPages(count, rowsPerPage) - 1 ? (
             <IconButton
+                className={styles.btnDis}
                 onClick={handleLastPageButtonClick}
                 disabled={page >= getNumberOfPages(count, rowsPerPage) - 1}
                 aria-label="last page"
             >
                 <KeyboardDoubleArrowRightIcon />
-            </IconButton>
+            </IconButton>):(<IconButton
+                className={styles.btn}
+                onClick={handleLastPageButtonClick}
+                disabled={page >= getNumberOfPages(count, rowsPerPage) - 1}
+                aria-label="last page"
+            >
+                <KeyboardDoubleArrowRightIcon />
+            </IconButton>)}
         </>
     );
 }

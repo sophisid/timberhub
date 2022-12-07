@@ -117,7 +117,7 @@ function Header(props: HeaderProps) {
                   <img
                     id={"mobile_icon_" + el.name}
                     className={headerStyles.bottomMenu_icon}
-                    src={"/images/icons/mobile_menu/" + el.icon + ".svg"}
+                    src={"/images/menu/" + el.icon + ".svg"}
                   ></img>
                   <div>{el.name}</div>
                 </div>

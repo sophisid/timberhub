@@ -1,6 +1,6 @@
 import React from "react";
 import api from "../../pages/api/api";
-import {TextField} from "@mui/material";
+// import {TextField} from "@mui/material";
 import { Person } from "../../model/person";
 import DataTable from "react-data-table-component";
 import styles from "./filter.module.scss";
@@ -30,9 +30,8 @@ const columns = [
 
 const FilterComponent = ({ filterText, onFilter, onClear }) => (
     	<div className={styles.filter}>
-    		<TextField
+    		<input
     			id="search"
-    			type="text"
     			placeholder="Search project..."
     			aria-label="Search Input"
     			value={filterText}

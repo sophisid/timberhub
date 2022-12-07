@@ -6,8 +6,8 @@ import React from 'react'
 import Router from 'next/router';
 
 const navActions: Array<HeaderAction> = [
-  { name: "Home", link: "/", icon: "home_icon" },
-  { name: "Projects", link: "/projects", icon: "projects_icon" },
+  { name: "Home", link: "/", icon: "home" },
+  { name: "Projects", link: "/projects", icon: "projects" },
 ];
 export default function Layout({
   children
