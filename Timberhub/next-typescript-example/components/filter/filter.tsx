@@ -5,6 +5,35 @@ import { Person } from "../../model/person";
 import DataTable from "react-data-table-component";
 import styles from "./filter.module.scss";
 import CustomMaterialPagination from "../pagination/Pagination";
+
+const customStyles = {
+    rows: {
+        style: {
+            '&:not(:last-of-type)': {
+				borderBottomStyle: 'solid',
+				borderBottomWidth: '1px',
+				borderBottomColor: '#E8E9EB'
+			},
+        },
+    },
+    headCells: {
+        style: {
+            paddingLeft: '8px', 
+            paddingRight: '8px',
+            
+        },
+    },
+    headRow: {
+		style: {
+			borderBottomColor: "#E8E9EB",
+		},},
+    cells: {
+        style: {
+            paddingLeft: '8px', 
+            paddingRight: '8px',
+        },
+    },
+};
 const columns = [
     {
         name: 'Project Name',
@@ -73,8 +102,9 @@ export const Filtering = () => {
     			subHeader
     			subHeaderComponent={subHeaderComponentMemo}
                 paginationComponent={CustomMaterialPagination}
-    			selectableRows
+    			// selectableRows
     			persistTableHead
+                customStyles={customStyles} 
     		/>
     	);
     };
