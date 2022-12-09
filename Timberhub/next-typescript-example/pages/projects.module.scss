@@ -1,8 +1,17 @@
 @import "../shared/styles/utils.module.scss";
 @import  "../components/buttons/buttons.module.scss";
-.dataTable{
-    padding: 3vw;
+
+.main{
+    padding: 3.2vw;
+    position: relative;
+&_dataTable{
     display: flex;
     flex-direction: column;
     width: 100%;
+    border: 1px solid rgb(234, 234, 234);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+}
 }

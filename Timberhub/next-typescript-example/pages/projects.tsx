@@ -24,8 +24,10 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className={styles.dataTable}>
-      <Filtering  />
+    <div className={styles.main}>
+      <div className={styles.main_dataTable}>
+        <Filtering  />
+      </div>
     </div>
   );
 };

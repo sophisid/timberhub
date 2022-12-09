@@ -5,6 +5,10 @@ import { Person } from "../../model/person";
 import DataTable from "react-data-table-component";
 import styles from "./filter.module.scss";
 import CustomMaterialPagination from "../pagination/Pagination";
+import { ReactComponent as Filtersvg } from "../../shared/images/icons/Filter.svg";
+import { CreatedBy, DeadlineCell, ProgressCell, ProjectName } from "../cells/cells";
+import { Projects } from "../../model/projects";
+
 
 const customStyles = {
     rows: {
@@ -35,24 +39,28 @@ const customStyles = {
     },
 };
 const columns = [
-    {
-        name: 'Project Name',
-        selector: (row: { title: string; }) => row.title,
+	{
+        name: 'PROJECT NAME',
+        selector: (row: {proj:Projects;}) => {row.proj},
+		cell: (row: Projects) => <ProjectName title={row.title} hasCompany={row.hasCompany} img={row.img} progress={row.progress} id={0} creator={row.creator} deadline={row.deadline}/> ,
         sortable: true,
     },
     {
-      name:'Created by',
-      selector: (row:{creator : Person ;}) =>row.creator.name,
+      name:'CREATED BY',
+      selector: (row:{creator: Projects;}) =>{row.proj},
+	  cell: (row: Projects) => <CreatedBy title={row.title} hasCompany={row.hasCompany} img={row.img} progress={row.progress} id={0} creator={row.creator} deadline={row.deadline}/> ,
       sortable: true,
     }, 
     {
-      name:"Progress",
-      selector: (row: {progress: number;}) => row.progress,
+      name:"PROGRESS",
+      selector: (row: {proj: Projects}) => {row.proj},
+	  cell: (row: Projects) => <ProgressCell title={row.title} hasCompany={row.hasCompany} img={row.img} progress={row.progress} id={0} creator={row.creator} deadline={row.deadline}/> ,
       sortable: true,
     },
     {
-      name:"Deadline",
-      selector: (row: {deadline: Date;}) => row.deadline.getDay(),
+      name:"DEADLINE",
+      selector: (row: {proj: Projects;}) => {row.proj},
+	  cell: (row: Projects) => <DeadlineCell title={row.title} hasCompany={row.hasCompany} img={row.img} progress={row.progress} id={0} creator={row.creator} deadline={row.deadline}/> ,
       sortable: true,
     }
 ]; 
@@ -68,7 +76,8 @@ const FilterComponent = ({ filterText, onFilter, onClear }) => (
                 className={styles.filter_searchbar}
     		/>
     		<button type="button" onClick={onClear}>
-    			Clear
+				Clear
+				{/* <img src="/images/icons/Filter.svg" /> */}
     		</button>
     	</div>
     );
@@ -94,7 +103,7 @@ export const Filtering = () => {
     
     	return (
     		<DataTable
-    			title="Contact List"
+    			// title="Contact List"
     			columns={columns}
     			data={filteredItems}
     			pagination

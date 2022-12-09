@@ -1,0 +1,26 @@
+@import "/shared/styles/utils.module.scss";
+.chipGrey{
+    display: flex;
+    align-items: center;
+    gap: 0.6vw;
+    font-size: 14px;
+    background-color:#F8F8F8;
+    border-radius: 6px;
+    padding: 0.4vw 0.8vw;
+    &_clock{
+        line-height: 0px;
+    }
+}
+
+.chipOrange{
+    display: flex;
+    align-items: center;
+    gap: 0.6vw;
+    font-size: 14px;
+    background-color: #FF965D13;
+    border-radius: 6px;
+    padding: 0.4vw 0.8vw;
+    &_clock{
+        line-height: 0px;
+    }
+}
