@@ -27,6 +27,8 @@ hr {
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
+
 }
 
 /* Track */
@@ -37,16 +39,11 @@ hr {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
+  background-clip: padding-box;  
+  border-radius: 50px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
-// @media (prefers-color-scheme: dark) {
-//   body{
-//       background: $color-dark-500;
-//       color: $color-light-100;
-//   }
-// }
