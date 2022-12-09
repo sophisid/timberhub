@@ -47,7 +47,7 @@ const columns = [
     },
     {
       name:'CREATED BY',
-      selector: (row:{creator: Projects;}) =>{row.proj},
+      selector: (row:{proj: Projects;}) =>{row.proj},
 	  cell: (row: Projects) => <CreatedBy title={row.title} hasCompany={row.hasCompany} img={row.img} progress={row.progress} id={0} creator={row.creator} deadline={row.deadline}/> ,
       sortable: true,
     }, 

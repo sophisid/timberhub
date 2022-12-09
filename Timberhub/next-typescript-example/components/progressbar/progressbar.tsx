@@ -7,8 +7,8 @@ export interface ProgressBarProps{
 };
 export function  ProgressBar(props: ProgressBarProps){
     return(
-        <div className={styles.progressContainer} style={{width:'252px'}}>
-            <div className={styles.progressContainer_completed} style={{ height:'6px',width:props.completed, backgroundColor:props.color}}>
+        <div className={styles.progressContainer} style={{width:'100%'}}>
+            <div className={styles.progressContainer_completed} style={{ height:'6px',width:props.completed+'%' , backgroundColor:props.color}}>
             </div>
         </div>
     );

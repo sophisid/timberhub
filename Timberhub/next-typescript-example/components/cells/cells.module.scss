@@ -12,6 +12,30 @@
     }
 }
 
+.projcell{
+    display: flex;
+    gap: 1vw;
+    padding: 11px;
+    img{
+        max-height: 71px;
+        object-fit:contain;
+    }
+    &_text{
+        &_projName{
+            font-size:15px;
+            font-weight: 400;
+            color:#3F434A ;
+        }
+        &_companyName{
+            font-size: 13px;
+            font-weight: 400;
+            color: #8A9099;
+        }
+    }
+}
+.projcellProgressBar{
+    min-width: 252px;
+}
 .chipOrange{
     display: flex;
     align-items: center;

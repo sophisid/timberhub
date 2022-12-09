@@ -25,13 +25,13 @@ const ProjectName = (props: Projects) => (
     	<div className={styles.projcell}>
             <img src={props.creator.img} />
             <div className={styles.projcell_text}>
-                <div className={styles.projcell_text_projNamevc}>{props.creator.name}</div>
+                <div className={styles.projcell_text_projName}>{props.creator.name}</div>
                 <div className={styles.projcell_text_companyName}>{props.creator.occupation}</div>
             </div>
     	</div>
     );
     const ProgressCell = (props: Projects) =>(
-        <div className={styles.projcell}>
+        <div className={styles.projcellProgressBar}>
            <ProgressBar color="#49C96D" maxWidth={100} completed={props.progress}/>
             <div>
                 {props.progress} %

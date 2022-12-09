@@ -10,11 +10,11 @@
   display: none;
 }
 .logo {
-  background: url("/public/images/logos/home.png");
+  background: url("/public/images/logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 16vw;
-  margin-top: get-vh(40px);
+  margin-top: get-vh(10px);
 
   cursor: pointer;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -147,14 +147,3 @@
     width: 35%;
   }
 }
-
-// @media (prefers-color-scheme: dark) {
-//   .actions{
-//     color:white;
-//   }
-//   .logo {
-//     background: url("/public/images/logos/home_dark.svg");
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//   }
-// }

@@ -23,7 +23,7 @@ export default function Layout({
         <meta name="description" content="Timberhub code" />
         <link rel="stylesheet" href="fonts/Poppins/style.css" />
       </Head>
-      <Header logoPath="/images/logos/home.png" actions={navActions}></Header>
+      <Header logoPath="/images/logo.svg" actions={navActions}></Header>
       <main  className={styles.m_b}>{children}</main>
     </div>
   );

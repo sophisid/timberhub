@@ -2,8 +2,9 @@
 @import  "../components/buttons/buttons.module.scss";
 
 .main{
-    padding: 3.2vw;
     position: relative;
+    overflow: scroll;
+    padding: 3vw;
 &_dataTable{
     display: flex;
     flex-direction: column;
@@ -13,5 +14,7 @@
     padding: 10px;
     margin: 10px;
     position: relative;
+    min-width: 1350px;
+    
 }
 }
