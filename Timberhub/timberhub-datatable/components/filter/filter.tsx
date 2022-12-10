@@ -8,6 +8,7 @@ import CustomMaterialPagination from "../pagination/Pagination";
 import { ReactComponent as Filtersvg } from "../../shared/images/icons/Filter.svg";
 import { CreatedBy, DeadlineCell, ProgressCell, ProjectName } from "../cells/cells";
 import { Projects } from "../../model/projects";
+import { TableRow } from "@material-ui/core";
 
 
 const customStyles = {
@@ -41,7 +42,7 @@ const customStyles = {
 const columns = [
 	{
         name: 'PROJECT NAME',
-        selector: (row: { title: string; }) => row.title,
+        selector: (row: string) =>  row.title,
 		cell: (row: Projects) => <ProjectName title={row.title} hasCompany={row.hasCompany} img={row.img} progress={row.progress} id={0} creator={row.creator} deadline={row.deadline}/> ,
         sortable: true,
     },
@@ -84,6 +85,7 @@ const FilterComponent = ({ filterText, onFilter, onClear }) => (
 export const Filtering = () => {
     	const [filterText, setFilterText] = React.useState('');
     	const [resetPaginationToggle, setResetPaginationToggle] = React.useState(false);
+		
     	const filteredItems = api.filter(
     		item => item.title && item.title.toLowerCase().includes(filterText.toLowerCase()),
     	);

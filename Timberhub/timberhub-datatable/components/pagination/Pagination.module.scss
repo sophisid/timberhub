@@ -1,0 +1,59 @@
+.btn{
+    background: #304FFD13 !important;
+    border-radius: 10px !important;
+    width: 34px !important;
+    height: 34px !important;
+    margin: 10px  !important;
+    &_icon{
+        color:#304FFD;
+    }
+}
+.btnDis{
+    background: #F8F8F8!important;
+    border-radius: 10px !important;
+    width: 34px !important;
+    height: 34px !important;
+    margin: 10px  !important;
+    color:#8A9099;
+}
+.multipleBtns{
+    display: flex;
+    &_btn{
+        background: #304FFD !important;
+        border-radius: 10px !important;
+        width: 34px !important;
+        height: 34px !important;
+        margin: 10px  !important;
+        color: white !important;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        /* identical to box height */
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    &_btndis{
+        background: #none !important;
+        border-radius: 10px !important;
+        width: 34px !important;
+        height: 34px !important;
+        margin: 10px  !important;
+        color: #3F434A !important;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        /* identical to box height */
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    &_text{
+        display: flex;
+        align-items: center;
+    }
+}
