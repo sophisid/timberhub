@@ -18,8 +18,8 @@ export default function Layout({
   return (
     <div id="layout-container" className={styles.container}>
       <Head>
-        <title>{"Timberhub code assesment"}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{"Timberhub code assessment"}</title>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
         <meta name="description" content="Timberhub code" />
         <link rel="stylesheet" href="fonts/Poppins/style.css" />
       </Head>

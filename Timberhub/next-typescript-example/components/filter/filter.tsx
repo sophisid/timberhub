@@ -41,25 +41,25 @@ const customStyles = {
 const columns = [
 	{
         name: 'PROJECT NAME',
-        selector: (row: {proj:Projects;}) => {row.proj},
+        selector: (row: { title: string; }) => row.title,
 		cell: (row: Projects) => <ProjectName title={row.title} hasCompany={row.hasCompany} img={row.img} progress={row.progress} id={0} creator={row.creator} deadline={row.deadline}/> ,
         sortable: true,
     },
     {
       name:'CREATED BY',
-      selector: (row:{proj: Projects;}) =>{row.proj},
+      selector: (row: { creator: string; }) => row.creator.name,
 	  cell: (row: Projects) => <CreatedBy title={row.title} hasCompany={row.hasCompany} img={row.img} progress={row.progress} id={0} creator={row.creator} deadline={row.deadline}/> ,
       sortable: true,
     }, 
     {
       name:"PROGRESS",
-      selector: (row: {proj: Projects}) => {row.proj},
+      selector: (row: { progress: number; }) => row.progress,
 	  cell: (row: Projects) => <ProgressCell title={row.title} hasCompany={row.hasCompany} img={row.img} progress={row.progress} id={0} creator={row.creator} deadline={row.deadline}/> ,
       sortable: true,
     },
     {
       name:"DEADLINE",
-      selector: (row: {proj: Projects;}) => {row.proj},
+      selector: (row: { deadline: Date; }) => row.deadline,
 	  cell: (row: Projects) => <DeadlineCell title={row.title} hasCompany={row.hasCompany} img={row.img} progress={row.progress} id={0} creator={row.creator} deadline={row.deadline}/> ,
       sortable: true,
     }

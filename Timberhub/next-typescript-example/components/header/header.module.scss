@@ -10,11 +10,11 @@
   display: none;
 }
 .logo {
-  background: url("/public/images/logo.png");
+  background: url("/images/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 16vw;
-  margin-top: get-vh(10px);
+  margin-top: get-vh(15px);
 
   cursor: pointer;
   -webkit-touch-callout: none; /* iOS Safari */

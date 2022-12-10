@@ -1,7 +1,4 @@
 import React from 'react';
-import { Company } from '../../model/company';
-import { CProgressBar } from '@coreui/react';
-import { CProgress } from '@coreui/react';
 import styles from "./cells.module.scss";
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { Projects } from '../../model/projects';
@@ -33,7 +30,7 @@ const ProjectName = (props: Projects) => (
     const ProgressCell = (props: Projects) =>(
         <div className={styles.projcellProgressBar}>
            <ProgressBar color="#49C96D" maxWidth={100} completed={props.progress}/>
-            <div>
+            <div className={styles.projcellProgressBar_percentage}>
                 {props.progress} %
             </div>
         </div>

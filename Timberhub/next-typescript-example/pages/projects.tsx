@@ -12,17 +12,6 @@ import { Filtering } from "../components/filter/filter";
 
 
 const App: React.FC = () => {
-  const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(5);
-  const [projectsData, setProjectsData] = useState<Projects[]>(api);
-
-
-  const findDeadline =(date: Date) => {
-    const today= new Date();
-    const deadline= date.getDate() -today.getDate();
-    return deadline;
-  }
-
   return (
     <div className={styles.main}>
       <div className={styles.main_dataTable}>

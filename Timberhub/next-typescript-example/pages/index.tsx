@@ -38,7 +38,7 @@ export default function Home() {
               />
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/readme">
             <div className={styles.actions_action_special}>
               <ButtonLargeOutlined
                 text="READ ME"

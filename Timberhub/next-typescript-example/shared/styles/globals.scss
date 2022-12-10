@@ -21,7 +21,9 @@ hr {
   background: $color-light-500;
   border: none;
 }
-
+:focus-visible {
+  outline: none!important
+}
 
 /**A custom scrollbar :) - May have to add more in the future*
 /* width */

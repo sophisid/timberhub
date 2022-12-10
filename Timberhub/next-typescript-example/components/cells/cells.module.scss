@@ -34,7 +34,12 @@
     }
 }
 .projcellProgressBar{
-    min-width: 252px;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+    &_percentage{
+        white-space: nowrap;
+    }
 }
 .chipOrange{
     display: flex;
